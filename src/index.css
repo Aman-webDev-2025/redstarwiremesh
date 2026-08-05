@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .clip-path-banner {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
