@@ -20,7 +20,7 @@ function AdvantageSection(){
           {tabs.map((name, index) => (
             <span
               key={index}
-              className="px-4 py-2 bg-gray-800 rounded-full text-sm hover:bg-[#ea6622] transition-colors cursor-pointer"
+              className="px-4 py-2 bg-gray-800 rounded-full text-sm hover:bg-[#ea6622] transition-colors cursor-pointer hover:-translate-1 duration-200 ease-in"
             >
               {name}
             </span>
@@ -44,7 +44,7 @@ function AdvantageSection(){
             <img
               src="https://www.redstarwiremesh.com/data/watermark/main/20250515/68259365781bb_.webp"
               alt="Solution Image"
-              className="w-full h-64 object-cover rounded"
+              className="w-full h-64 object-cover rounded hover:-translate-y-1 ease-in-out duration-200"
             />
           </div>
         </div>

@@ -31,8 +31,8 @@ const industryList = [
   },
 ]
 
-function IndustrySection() {
-  return (
+function IndustrySection(){
+  return(
     <section className="py-16 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         
@@ -43,7 +43,7 @@ function IndustrySection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {industryList.map((item, index) => (
-            <div key={index} className="bg-[#f5f5f5] p-4 rounded hover:shadow-md transition-shadow">
+            <div key={index} className="bg-[#f5f5f5] p-4 rounded hover:-translate-y-1 duration-300 ease-in-out hover:shadow-2xl hover:bg-gradient-to-r from-orange-200 to-[#f5f5f5]">
               <img
                 src={item.image}
                 alt={item.name}
