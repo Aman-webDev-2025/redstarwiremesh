@@ -1,62 +1,86 @@
-function AboutSection(){
-  return(
-    <section className="py-16 bg-gray-50 border-t border-gray-200">
-      <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        
-        {/* Left Side */}
-        <div>
-          <span className="text-[#ea6622] font-semibold text-sm">RED STAR WIRE MESH</span>
-          <h2 className="text-3xl font-bold mt-2 mb-4">
-            The World's <span className="text-[#ea6622]">Top 10</span> Mines Screen & Panels Suppliers
-          </h2>
-          <p className="text-gray-600 leading-relaxed">
-            Red Star Wire Mesh Manufacturing Co., Ltd. focuses on the production of mining screens and screening media, backed by extensive experience and a strong global presence. We deliver efficient and durable screening solutions worldwide.
-          </p>
+function AboutSection() {
+  const statsList = [
+    {
+      num: '1989',
+      label: 'Established Year',
+      desc: 'Over 36 years of screen manufacturing experience',
+      icon: 'https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc16e30c5_.webp',
+    },
+    {
+      num: '70+',
+      label: 'Export Countries',
+      desc: 'Supplying North America, Europe, Australia & Africa',
+      icon: 'https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc2381da1_.webp',
+    },
+    {
+      num: '370+',
+      label: 'Skilled Workforce',
+      desc: 'Dedicated R&D engineers & technical support',
+      icon: 'https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc3076cf8_.webp',
+    },
+    {
+      num: '58,000 m²',
+      label: 'Factory Area',
+      desc: 'Heavy industrial manufacturing plant & warehouse',
+      icon: 'https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc3dacca6_.webp',
+    },
+  ]
+
+  return (
+    <section id="about" className="py-20 bg-white border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Description Column */}
+          <div className="lg:col-span-6 space-y-6">
+            <span className="bg-amber-100 text-amber-800 text-xs font-extrabold tracking-wider uppercase px-3 py-1 rounded">
+              ABOUT RED STAR WIRE MESH
+            </span>
+
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
+              Top 10 Global Mining Screen & Panel Manufacturer
+            </h2>
+
+            <p className="text-slate-600 leading-relaxed text-base">
+              Red Star Wire Mesh Manufacturing Co., Ltd. focuses on engineering precision screen media for high-wear aggregate and mineral processing plants. Backed by state-of-the-art weaving looms, polyurethane molding facilities, and ISO-certified quality assurance systems.
+            </p>
+
+            <div className="pt-2">
+              <a
+                href="#contact"
+                className="inline-flex items-center bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold px-6 py-3 rounded-md transition-colors"
+              >
+                Learn About Our Manufacturing Process ➔
+              </a>
+            </div>
+          </div>
+
+          {/* Right Stats Grid */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {statsList.map((stat, idx) => (
+              <div
+                key={idx}
+                className="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-amber-500/50 transition-colors"
+              >
+                <img
+                  src={stat.icon}
+                  alt={stat.label}
+                  className="h-10 mb-4 object-contain"
+                />
+                <div className="text-3xl font-extrabold text-amber-600 mb-1">
+                  {stat.num}
+                </div>
+                <div className="text-base font-bold text-slate-800 mb-1">
+                  {stat.label}
+                </div>
+                <div className="text-xs text-slate-500 leading-relaxed">
+                  {stat.desc}
+                </div>
+              </div>
+            ))}
+          </div>
+
         </div>
-
-        {/* Right Side Stats */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-white p-6 rounded shadow-sm text-center">
-            <img
-              src="https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc16e30c5_.webp"
-              alt="Icon"
-              className="h-8 mx-auto mb-2"
-            />
-            <div className="text-2xl font-bold text-[#ea6622]">1989</div>
-            <div className="text-sm text-gray-500">Established in</div>
-          </div>
-
-          <div className="bg-white p-6 rounded shadow-sm text-center">
-            <img
-              src="https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc2381da1_.webp"
-              alt="Icon"
-              className="h-8 mx-auto mb-2"
-            />
-            <div className="text-2xl font-bold text-[#ea6622]">70+</div>
-            <div className="text-sm text-gray-500">Exporting Countries</div>
-          </div>
-
-          <div className="bg-white p-6 rounded shadow-sm text-center">
-            <img
-              src="https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc3076cf8_.webp"
-              alt="Icon"
-              className="h-8 mx-auto mb-2"
-            />
-            <div className="text-2xl font-bold text-[#ea6622]">370+</div>
-            <div className="text-sm text-gray-500">Employees</div>
-          </div>
-
-          <div className="bg-white p-6 rounded shadow-sm text-center">
-            <img
-              src="https://www.redstarwiremesh.com/data/watermark/main/20250516/6826dc3dacca6_.webp"
-              alt="Icon"
-              className="h-8 mx-auto mb-2"
-            />
-            <div className="text-2xl font-bold text-[#ea6622]">58000 m²</div>
-            <div className="text-sm text-gray-500">Factory Area</div>
-          </div>
-        </div>
-
       </div>
     </section>
   )

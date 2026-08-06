@@ -1,60 +1,82 @@
-function Footer(){
-  return(
-    <footer className="bg-[#090909] text-gray-400 text-sm py-12">
-      <div className="max-w-[1200px] mx-auto px-6">
+function Footer() {
+  return (
+    <footer className="bg-[#090d16] text-slate-400 text-sm py-16 border-t border-slate-800">
+      <div className="max-w-7xl mx-auto px-6">
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
           
-          {/* Logo */}
-          <div>
-            <img
-              src="https://www.redstarwiremesh.com/logo2.png"
-              alt="Red Star Wire Mesh Logo"
-              className="h-10 object-contain mb-3"
-            />
-            <p className="text-xs text-gray-500">
-              Red Star Wire Mesh - your trusted partner in global mining and aggregate screening.
+          {/* Company Brand Column */}
+          <div className="space-y-4">
+            <div className="bg-white p-2 rounded w-fit">
+              <img
+                src="https://www.redstarwiremesh.com/logo2.png"
+                alt="Red Star Wire Mesh Logo"
+                className="h-9 object-contain"
+              />
+            </div>
+            <p className="text-xs text-slate-400 leading-relaxed">
+              Red Star Wire Mesh Manufacturing Co., Ltd. – Professional mining screen mesh manufacturer supplying woven wire screens, self-cleaning media, and polyurethane panels globally.
             </p>
           </div>
 
-          {/* Products */}
+          {/* Products Column */}
           <div>
-            <h4 className="text-white font-bold mb-3">Products</h4>
-            <ul className="space-y-1 text-xs">
-              <li>Metal Woven Wire Mesh Screen</li>
-              <li>Piano Wire Screens</li>
-              <li>Clog-Resistant Self-Cleaning Mesh</li>
-              <li>Polyurethane Screen Panel</li>
-              <li>Perforated Plate</li>
+            <h4 className="text-white font-bold text-base mb-4 border-b border-amber-600 pb-1 w-fit">
+              Product Categories
+            </h4>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li>• Metal Woven Wire Mesh Screen</li>
+              <li>• Piano Wire Screens</li>
+              <li>• Clog-Resistant Self-Cleaning Screen</li>
+              <li>• Polyurethane Screen Panel</li>
+              <li>• Fine Aperture Polyurethane Media</li>
+              <li>• Steel-Reinforced Polyurethane Panel</li>
+              <li>• Perforated Screen Plate</li>
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links Column */}
           <div>
-            <h4 className="text-white font-bold mb-3">Quick Links</h4>
-            <ul className="space-y-1 text-xs">
-              <li>Home</li>
-              <li>Products</li>
-              <li>Industries</li>
-              <li>About Us</li>
-              <li>Contact Us</li>
+            <h4 className="text-white font-bold text-base mb-4 border-b border-amber-600 pb-1 w-fit">
+              Quick Navigation
+            </h4>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><a href="#" className="hover:text-amber-500">Home</a></li>
+              <li><a href="#products" className="hover:text-amber-500">Products</a></li>
+              <li><a href="#industries" className="hover:text-amber-500">Industries</a></li>
+              <li><a href="#about" className="hover:text-amber-500">About Us</a></li>
+              <li><a href="#cases" className="hover:text-amber-500">Field Cases</a></li>
+              <li><a href="#news" className="hover:text-amber-500">News & Exhibitions</a></li>
+              <li><a href="#contact" className="hover:text-amber-500">Contact Sales</a></li>
             </ul>
           </div>
 
-          {/* Contact Us */}
+          {/* Contact Details Column */}
           <div>
-            <h4 className="text-white font-bold mb-3">Contact Us</h4>
-            <div className="space-y-2 text-xs">
-              <p><span className="text-white font-semibold">Email:</span> info@redstarwiremesh.com</p>
-              <p><span className="text-white font-semibold">WhatsApp:</span> +86 13253247773</p>
-              <p><span className="text-white font-semibold">Phone:</span> +86 13253247773</p>
+            <h4 className="text-white font-bold text-base mb-4 border-b border-amber-600 pb-1 w-fit">
+              Contact Sales
+            </h4>
+            <div className="space-y-3 text-xs text-slate-300">
+              <p><span className="font-bold text-white block">Email:</span> sales@redstarwiremesh.com</p>
+              <p><span className="font-bold text-white block">WhatsApp / Phone:</span> +86 13253247773</p>
+              <p><span className="font-bold text-white block">Factory Address:</span> Anping County, Hebei Province, China</p>
             </div>
           </div>
 
         </div>
 
-        <div className="pt-6 text-center text-xs text-gray-500">
-          Copyright © Red Star Wire Mesh Manufacturing Co., Ltd. All Rights Reserved.
+        {/* Bottom Copyright */}
+        <div className="pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div>
+            Copyright © {new Date().getFullYear()} Red Star Wire Mesh Manufacturing Co., Ltd. All Rights Reserved.
+          </div>
+          <div className="space-x-4">
+            <a href="#" className="hover:text-amber-500">Sitemap</a>
+            <span>|</span>
+            <a href="#" className="hover:text-amber-500">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" className="hover:text-amber-500">Terms of Service</a>
+          </div>
         </div>
 
       </div>
