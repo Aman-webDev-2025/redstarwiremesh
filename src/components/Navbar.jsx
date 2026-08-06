@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar(){
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#090909] text-white">
       <div className="max-w-[1400px] mx-auto flex items-center justify-between h-[90px] px-6">
