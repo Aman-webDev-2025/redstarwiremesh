@@ -1,74 +1,47 @@
-const chooseReasons = [
+const reasons = [
   {
-    title: 'Longer Service Life & Wear Resistance',
+    title: 'Longer Service Life & More Stable Performance',
     image: 'https://www.redstarwiremesh.com/data/watermark/main/20251204/693141e2c4d7e_.webp',
-    bullets: [
-      'High-tensile manganese steel and premium polyurethane materials.',
-      'Significantly lower downtime in high-abrasion ore and quarry environments.',
-      'Consistent mesh opening stability prevents clogging and blinding.',
-    ],
+    text: 'Red Star Wire Mesh places strong emphasis on selecting premium raw materials and ensuring strict quality control. Our screens last significantly longer than typical factory screens.',
   },
   {
-    title: 'Complete Supply Chain & Fast Delivery',
+    title: 'Strong Supply Chain Capability & Reliable Delivery',
     image: 'https://www.redstarwiremesh.com/data/watermark/main/20251204/6931420eac92a_.webp',
-    bullets: [
-      'In-house weaving, polyurethane molding, and raw material inventory.',
-      'Reliable international shipping for urgent order turnarounds.',
-      'Prevent unplanned plant shutdowns waiting for replacement screens.',
-    ],
+    text: 'Red Star has a complete in-house production system and ample inventory, ensuring fast and reliable deliveries—even for urgent orders.',
   },
   {
-    title: 'Custom Engineering & On-Site Upgrades',
+    title: 'Custom Solutions & On-Site Performance Upgrades',
     image: 'https://www.redstarwiremesh.com/data/watermark/main/20251204/69314226e3328_.webp',
-    bullets: [
-      'Tailored wire diameter optimization and increased open area.',
-      'Self-cleaning harp screen configurations for moist sticky materials.',
-      'Custom hook designs fitting all major vibrating screen decks worldwide.',
-    ],
+    text: 'Red Star not only provides standard screens, but also delivers customized solutions based on customer requirements.',
   },
 ]
 
 function WhyChooseUs() {
   return (
-    <section className="py-20 bg-slate-100 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 bg-white">
+      <div className="max-w-[1200px] mx-auto px-6">
         
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-amber-600 font-extrabold text-xs tracking-widest uppercase">
-            WHY RED STAR
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Key Advantages for Quarry & Mining Operators
-          </h2>
-          <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-            Delivering engineered screening media built for extreme fatigue resistance, maximum throughput, and cost savings per ton.
-          </p>
+        <div className="flex justify-between items-end mb-10">
+          <div>
+            <span className="text-[#ea6622] font-semibold text-sm">WHY CHOOSE US</span>
+            <h2 className="text-3xl font-bold mt-1">Few Reasons Why You Choose Us.</h2>
+          </div>
+          <button className="bg-[#ea6622] text-white px-6 py-2 rounded text-sm font-medium">
+            View More
+          </button>
         </div>
 
-        <div className="space-y-10">
-          {chooseReasons.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
-            >
-              <div className="lg:col-span-5 relative overflow-hidden rounded-xl h-64">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover rounded-xl"
-                />
-              </div>
-
-              <div className="lg:col-span-7 space-y-4">
-                <h3 className="text-2xl font-bold text-slate-900">{item.title}</h3>
-                <ul className="space-y-2 text-slate-600 text-sm leading-relaxed">
-                  {item.bullets.map((b, bIdx) => (
-                    <li key={bIdx} className="flex items-start">
-                      <span className="text-amber-600 font-bold mr-2">✓</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
+        <div className="space-y-8">
+          {reasons.map((item, index) => (
+            <div key={index} className="bg-gray-50 p-6 rounded grid grid-cols-1 md:grid-cols-2 gap-6 items-center border border-gray-100">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-56 object-cover rounded"
+              />
+              <div>
+                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                <p className="text-gray-600 italic leading-relaxed">• {item.text}</p>
               </div>
             </div>
           ))}

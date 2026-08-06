@@ -1,40 +1,21 @@
-function FloatingContact() {
-  return (
-    <div className="fixed right-3 top-1/2 -translate-y-1/2 z-40 flex flex-col gap-2">
-      <a
-        href="https://api.whatsapp.com/send?phone=8613253247773"
-        target="_blank"
-        rel="noreferrer"
-        className="w-10 h-10 bg-slate-900 text-white rounded-lg flex items-center justify-center text-sm shadow-md hover:bg-amber-600 transition-colors"
-        title="WhatsApp Us"
-      >
+function FloatingContact(){
+  return(
+    <div className="fixed right-3 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2">
+      <div className="w-9 h-9 bg-black text-white rounded flex items-center justify-center text-sm shadow cursor-pointer hover:bg-[#ea6622]" title="WhatsApp">
         💬
-      </a>
-      <a
-        href="tel:+8613253247773"
-        className="w-10 h-10 bg-slate-900 text-white rounded-lg flex items-center justify-center text-sm shadow-md hover:bg-amber-600 transition-colors"
-        title="Call Us: +86 13253247773"
-      >
+      </div>
+      <div className="w-9 h-9 bg-black text-white rounded flex items-center justify-center text-sm shadow cursor-pointer hover:bg-[#ea6622]" title="Phone">
         📞
-      </a>
-      <a
-        href="mailto:sales@redstarwiremesh.com"
-        className="w-10 h-10 bg-slate-900 text-white rounded-lg flex items-center justify-center text-sm shadow-md hover:bg-amber-600 transition-colors"
-        title="Email Sales"
-      >
+      </div>
+      <div className="w-9 h-9 bg-black text-white rounded flex items-center justify-center text-sm shadow cursor-pointer hover:bg-[#ea6622]" title="Email">
         ✉️
-      </a>
-      <a
-        href="#"
-        onClick={(e) => {
-          e.preventDefault()
-          window.scrollTo({ top: 0, behavior: 'smooth' })
-        }}
-        className="w-10 h-10 bg-slate-900 text-white rounded-lg flex items-center justify-center text-sm shadow-md hover:bg-amber-600 transition-colors"
-        title="Back to top"
-      >
+      </div>
+      <div className="w-9 h-9 bg-black text-white rounded flex items-center justify-center text-xs font-bold shadow cursor-pointer hover:bg-[#ea6622]" title="WeChat">
+        WX
+      </div>
+      <div className="w-9 h-9 bg-black text-white rounded flex items-center justify-center text-sm shadow cursor-pointer hover:bg-[#ea6622]" title="Top">
         ▲
-      </a>
+      </div>
     </div>
   )
 }
