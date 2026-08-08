@@ -1,48 +1,62 @@
-const reasons = [
-  {
-    title: 'Longer Service Life & More Stable Performance',
-    image: 'https://www.redstarwiremesh.com/data/watermark/main/20251204/693141e2c4d7e_.webp',
-    text: 'Red Star Wire Mesh places strong emphasis on selecting premium raw materials and ensuring strict quality control. Our screens last significantly longer than typical factory screens.',
-  },
-  {
-    title: 'Strong Supply Chain Capability & Reliable Delivery',
-    image: 'https://www.redstarwiremesh.com/data/watermark/main/20251204/6931420eac92a_.webp',
-    text: 'Red Star has a complete in-house production system and ample inventory, ensuring fast and reliable deliveries—even for urgent orders.',
-  },
-  {
-    title: 'Custom Solutions & On-Site Performance Upgrades',
-    image: 'https://www.redstarwiremesh.com/data/watermark/main/20251204/69314226e3328_.webp',
-    text: 'Red Star not only provides standard screens, but also delivers customized solutions based on customer requirements.',
-  },
-]
-
 function WhyChooseUs() {
+  const reasons = [
+    {
+      title: 'Uncompromised Value',
+      desc: 'High-grade raw materials and structurally sound designs optimize total cost of ownership.',
+      icon: '💰',
+    },
+    {
+      title: 'Absolute Promise Delivery',
+      desc: 'Customer-first philosophy with a zero-excuse mindset to ensure promises are fulfilled on time.',
+      icon: '🛡️',
+    },
+    {
+      title: 'Continuous Training',
+      desc: 'Technical and operational training is embedded in our DNA, empowering our workforce.',
+      icon: '🎓',
+    },
+    {
+      title: 'Meticulous Quality',
+      desc: 'Strict compliance with Indian Standard (IS) codes, backed by multi-phase quality inspections.',
+      icon: '📋',
+    },
+    {
+      title: 'Elite After-Sales',
+      desc: 'Deep technical domain knowledge ensures reliable, ongoing lifecycle infrastructure support.',
+      icon: '⚙️',
+    },
+    {
+      title: 'Industry Experience',
+      desc: 'Serving critical heavy infrastructure, construction, and mining sectors since 2013.',
+      icon: '🏢',
+    },
+  ]
+
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section id="why-choose" className="py-20 bg-gray-50 border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-6">
         
-        <div className="flex justify-between items-end mb-10">
-          <div>
-            <span className="text-[#ea6622] font-semibold text-sm">WHY CHOOSE US</span>
-            <h2 className="text-3xl font-bold mt-1">Few Reasons Why You Choose Us.</h2>
-          </div>
-          <button className="bg-[#ea6622] text-white px-6 py-2 rounded text-sm font-medium">
-            View More
-          </button>
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span className="bg-[#F7C900] text-[#0A0A0A] font-black text-xs px-3 py-1 rounded uppercase tracking-wider">
+            WHY CHOOSE VAK GROUP?
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-black text-[#0A0A0A] tracking-tight">
+            6 Reasons Why Industry Leaders Choose Us
+          </h2>
+          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+            Delivering heavy engineering solutions backed by rigorous Indian Standard compliance and proactive customer service.
+          </p>
         </div>
 
-        <div className="space-y-8">
-          {reasons.map((item, index) => (
-            <div key={index} className="bg-gray-50 p-6 rounded grid grid-cols-1 md:grid-cols-2 gap-6 items-center border border-gray-100">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-56 object-cover rounded"
-              />
-              <div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-600 italic leading-relaxed">• {item.text}</p>
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reasons.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="text-3xl mb-4">{item.icon}</div>
+              <h3 className="text-xl font-bold text-[#0A0A0A] mb-2">{item.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
