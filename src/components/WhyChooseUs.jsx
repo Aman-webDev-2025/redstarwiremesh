@@ -3,32 +3,32 @@ function WhyChooseUs() {
     {
       title: 'Uncompromised Value',
       desc: 'High-grade raw materials and structurally sound designs optimize total cost of ownership.',
-      icon: '💰',
+      icon: 'fa-solid fa-coins',
     },
     {
       title: 'Absolute Promise Delivery',
       desc: 'Customer-first philosophy with a zero-excuse mindset to ensure promises are fulfilled on time.',
-      icon: '🛡️',
+      icon: 'fa-solid fa-shield-halved',
     },
     {
       title: 'Continuous Training',
       desc: 'Technical and operational training is embedded in our DNA, empowering our workforce.',
-      icon: '🎓',
+      icon: 'fa-solid fa-graduation-cap',
     },
     {
       title: 'Meticulous Quality',
       desc: 'Strict compliance with Indian Standard (IS) codes, backed by multi-phase quality inspections.',
-      icon: '📋',
+      icon: 'fa-solid fa-square-check',
     },
     {
       title: 'Elite After-Sales',
       desc: 'Deep technical domain knowledge ensures reliable, ongoing lifecycle infrastructure support.',
-      icon: '⚙️',
+      icon: 'fa-solid fa-wrench',
     },
     {
       title: 'Industry Experience',
       desc: 'Serving critical heavy infrastructure, construction, and mining sectors since 2013.',
-      icon: '🏢',
+      icon: 'fa-solid fa-building',
     },
   ]
 
@@ -54,7 +54,9 @@ function WhyChooseUs() {
               key={idx}
               className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
+              <div className="w-12 h-12 bg-[#2F353B] text-[#F7C900] rounded-lg flex items-center justify-center mb-4 text-xl">
+                <i className={item.icon}></i>
+              </div>
               <h3 className="text-xl font-bold text-[#0A0A0A] mb-2">{item.title}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
             </div>

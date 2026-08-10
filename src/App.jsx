@@ -4,6 +4,7 @@ import IndustrySection from './components/IndustrySection'
 import AboutSection from './components/AboutSection'
 import WhyChooseUs from './components/WhyChooseUs'
 import ProductsSection from './components/ProductsSection'
+import ProjectsSection from './components/ProjectsSection'
 import AdvantageSection from './components/AdvantageSection'
 import PartnerSection from './components/PartnerSection'
 import CareersSection from './components/CareersSection'
@@ -13,7 +14,7 @@ import FloatingContact from './components/FloatingContact'
 
 function App() {
   return (
-    <div className="bg-white text-[#0A0A0A] font-sans min-h-screen relative selection:bg-[#F7C900] selection:text-[#0A0A0A]">
+    <div className="bg-[#0D0F12] text-slate-100 font-sans min-h-screen relative selection:bg-[#F7C900] selection:text-[#0D0F12]">
       <Navbar />
       <main>
         <Hero />
@@ -21,6 +22,7 @@ function App() {
         <AboutSection />
         <WhyChooseUs />
         <ProductsSection />
+        <ProjectsSection />
         <AdvantageSection />
         <PartnerSection />
         <CareersSection />

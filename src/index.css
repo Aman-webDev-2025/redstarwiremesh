@@ -1,17 +1,94 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --primary: #F7C900;
+    --primary-dark: #D4A300;
+    --dark-bg: #0D0F12;
+    --card-bg: #151921;
+    --border-color: #2A303C;
+    --accent: #FF9D00;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #0D0F12;
+    color: #F8FAFC;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
 @layer utilities {
+  .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+  
   .clip-path-banner {
     clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
   }
+
+  .clip-slant {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  }
+  
+  .glass-card {
+    background: rgba(21, 25, 33, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card-gold {
+    background: rgba(247, 201, 0, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(247, 201, 0, 0.2);
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 25px rgba(247, 201, 0, 0.25);
+  }
+
+  .glow-gold-lg {
+    box-shadow: 0 0 45px rgba(247, 201, 0, 0.35);
+  }
+}
+
+/* Continuous Logo Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0F12;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A303C;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F7C900;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
-}
