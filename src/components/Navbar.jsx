@@ -7,7 +7,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'products', 'installations', 'why-choose', 'careers', 'contact']
+      const sections = ['home', 'top-products', 'about', 'products', 'installations', 'why-choose', 'careers', 'contact']
       const scrollPosition = window.scrollY + 200
 
       for (const sectionId of sections) {
@@ -33,8 +33,8 @@ function Navbar() {
 
   const navLinks = [
     { id: 'home', label: 'HOME', href: '#' },
+    { id: 'top-products', label: 'PRODUCTS', href: '#top-products' },
     { id: 'about', label: 'ABOUT US', href: '#about' },
-    { id: 'products', label: 'PRODUCTS', href: '#products' },
     { id: 'installations', label: 'INSTALLATIONS', href: '#installations' },
     { id: 'why-choose', label: 'WHY VAK', href: '#why-choose' },
     { id: 'careers', label: 'CAREERS', href: '#careers' },
@@ -48,15 +48,15 @@ function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-gray-300">
           <div className="flex items-center space-x-6">
             <span className="flex items-center">
-              <i className="fa-solid fa-location-dot text-[#F7C900] mr-1.5"></i>
+              <i className="fa-solid fa-location-dot text-[#FFC000] mr-1.5"></i>
               Mandideep Factory | Indore Office | Bhopal Office
             </span>
             <span className="flex items-center">
-              <i className="fa-solid fa-phone text-[#F7C900] mr-1.5"></i>
+              <i className="fa-solid fa-phone text-[#FFC000] mr-1.5"></i>
               Sales: +91 9977003608, 9977003978
             </span>
             <span className="flex items-center">
-              <i className="fa-solid fa-wrench text-[#F7C900] mr-1.5"></i>
+              <i className="fa-solid fa-wrench text-[#FFC000] mr-1.5"></i>
               Service & Parts: +91 7880106776
             </span>
           </div>
@@ -65,7 +65,7 @@ function Navbar() {
               href="https://wa.me/919977003608"
               target="_blank"
               rel="noreferrer"
-              className="text-[#F7C900] font-bold hover:underline flex items-center"
+              className="text-[#FFC000] font-bold hover:underline flex items-center"
             >
               <i className="fa-brands fa-whatsapp mr-1.5 text-base"></i>
               WhatsApp Direct
@@ -98,8 +98,8 @@ function Navbar() {
                 onClick={() => setActiveSection(link.id)}
                 className={`pb-1 transition-all duration-200 border-b-2 ${
                   isActive
-                    ? 'text-[#F7C900] border-[#F7C900]'
-                    : 'text-gray-300 border-transparent hover:text-[#F7C900] hover:border-[#F7C900]/50'
+                    ? 'text-[#FFC000] border-[#FFC000]'
+                    : 'text-gray-300 border-transparent hover:text-[#FFC000] hover:border-[#FFC000]/50'
                 }`}
               >
                 {link.label}
@@ -114,7 +114,7 @@ function Navbar() {
             href="https://wa.me/919977003608"
             target="_blank"
             rel="noreferrer"
-            className="bg-[#F7C900] text-[#0D0F12] hover:bg-yellow-400 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors shadow-lg glow-gold flex items-center space-x-1.5"
+            className="bg-[#FFC000] text-[#0D0F12] hover:bg-yellow-400 font-black px-5 py-2.5 rounded-xl text-xs uppercase tracking-wider transition-colors shadow-lg glow-gold flex items-center space-x-1.5"
           >
             <i className="fa-brands fa-whatsapp text-sm"></i>
             <span>Request Quote</span>
@@ -142,7 +142,7 @@ function Navbar() {
               key={link.id}
               href={link.href}
               className={`block py-1 ${
-                activeSection === link.id ? 'text-[#F7C900]' : 'text-gray-300 hover:text-[#F7C900]'
+                activeSection === link.id ? 'text-[#FFC000]' : 'text-gray-300 hover:text-[#FFC000]'
               }`}
               onClick={() => {
                 setActiveSection(link.id)
